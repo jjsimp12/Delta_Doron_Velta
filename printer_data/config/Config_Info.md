@@ -15,7 +15,6 @@
 # it travles and when it is complete do a SAVE_CONFIG.
 
 
-
 # To config PID for bed and extruder:
 
   PID_CALIBRATE HEATER=heater_bed TARGET=60 [WRITE_FILE=1]
