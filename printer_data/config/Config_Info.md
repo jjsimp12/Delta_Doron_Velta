@@ -53,3 +53,10 @@
     G28 X0 Y0
     M18 S180 ;disable motors after 180s
 
+  # To install Kiauh and Git
+
+  sudo apt update && sudo apt full-upgrade && sudo apt-get install git -y
+
+  cd ~ && git clone https://github.com/dw-0/kiauh.git
+  ./kiauh/kiauh.sh
+
