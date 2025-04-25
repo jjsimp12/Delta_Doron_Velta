@@ -15,6 +15,13 @@
 # it travles and when it is complete do a SAVE_CONFIG.
 
 
+# Use Kalico (Danger Klipper) in place of Mainline Klipper
+
+  mv ~/klipper ~/klipper_old
+  git clone https://github.com/KalicoCrew/kalico.git ~/klipper
+  sudo systemctl restart klipper
+
+
 # To config PID for bed and extruder:
 
   PID_CALIBRATE HEATER=heater_bed TARGET=60 [WRITE_FILE=1]
@@ -53,10 +60,13 @@
     G28 X0 Y0
     M18 S180 ;disable motors after 180s
 
-  # To install Kiauh and Git
+  # To install Kiauh, Git and Klipper Backup
 
   sudo apt update && sudo apt full-upgrade && sudo apt-get install git -y
 
   cd ~ && git clone https://github.com/dw-0/kiauh.git
   ./kiauh/kiauh.sh
+
+  curl -fsSL get.klipperbackup.xyz | bash
+  ~/klipper-backup/install.sh
 
