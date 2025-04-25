@@ -22,6 +22,11 @@
   sudo systemctl restart klipper
 
 
+# Update PIP if needed
+
+  python -m pip install --upgrade pip
+  
+
 # To config PID for bed and extruder:
 
   PID_CALIBRATE HEATER=heater_bed TARGET=60 [WRITE_FILE=1]
